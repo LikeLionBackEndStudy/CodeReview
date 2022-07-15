@@ -44,4 +44,18 @@ class ArrayListMainTest {
 
         assertEquals(2, al.size());
     }
+
+    @Test
+    void removeAt을_실행하면_뒷좌석에_있는_데이터들이_전부_한칸씩_앞으로_이동() {
+        ArrayList al = new ArrayList();
+        al.add(100);
+        al.add(200);
+        al.add(300);
+
+        assertEquals(200, al.get(1));
+
+        al.removeAt(1);
+
+        assertEquals(300, al.get(1));
+    }
 }
