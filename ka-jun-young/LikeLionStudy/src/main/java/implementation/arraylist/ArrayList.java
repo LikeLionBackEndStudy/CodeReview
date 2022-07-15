@@ -3,7 +3,6 @@ package implementation.arraylist;
 public class ArrayList {
     private int[] datum;
     private int size;
-    private int arrayLength;
 
     ArrayList() {
         datum = new int[2];
@@ -11,8 +10,29 @@ public class ArrayList {
     }
 
     public void add(int data) {
+        sizeUpIfFull();
         datum[size] = data;
         size++;
+    }
+
+    public void sizeUpIfFull() {
+        if (isFull()) {
+            sizeUp();
+        }
+    }
+
+    private void sizeUp() {
+        int[] newDatum = new int[datum.length * 2];
+
+        for ( int i = 0; i < datum.length; i++ ) {
+            newDatum[i] = datum[i];
+        }
+
+        datum = newDatum;
+    }
+
+    public boolean isFull() {
+        return size == datum.length;
     }
 
     public int get(int idx) {
@@ -32,5 +52,12 @@ public class ArrayList {
 
     public int getArrayLength() {
         return datum.length;
+    }
+
+    public void showAllValues() {
+        System.out.println("== 전체 데이터 출력 ==");
+        for (int i = 0; i < size; i++) {
+            System.out.println(i + " : " + datum[i]);
+        }
     }
 }
