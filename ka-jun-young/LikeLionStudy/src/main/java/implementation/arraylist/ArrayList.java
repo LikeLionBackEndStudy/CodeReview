@@ -3,9 +3,10 @@ package implementation.arraylist;
 public class ArrayList {
     private int[] datum;
     private int size;
+    private int arrayLength;
 
     ArrayList() {
-        datum = new int[10];
+        datum = new int[2];
         size = 0;
     }
 
@@ -27,5 +28,9 @@ public class ArrayList {
 
     public int size() {
         return size;
+    }
+
+    public int getArrayLength() {
+        return datum.length;
     }
 }
