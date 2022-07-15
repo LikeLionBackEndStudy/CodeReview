@@ -30,4 +30,18 @@ class ArrayListMainTest {
 
         al.removeAt(1);
     }
+
+    @Test
+    void removeAt을_실행하면_size가_1_줄어든다() {
+        ArrayList al = new ArrayList();
+        al.add(100);
+        al.add(200);
+        al.add(300);
+
+        assertEquals(3, al.size());
+
+        al.removeAt(1);
+
+        assertEquals(2, al.size());
+    }
 }

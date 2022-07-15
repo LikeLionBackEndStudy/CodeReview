@@ -18,4 +18,8 @@ public class ArrayList {
     public void removeAt(int idx) {
 
     }
+
+    public int size() {
+        return 0;
+    }
 }
