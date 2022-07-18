@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LikeLionStudy.iml" filepath="$PROJECT_DIR$/LikeLionStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LikeLionCodeReview.iml" filepath="$PROJECT_DIR$/LikeLionCodeReview.iml" />
     </modules>
   </component>
 </project>
